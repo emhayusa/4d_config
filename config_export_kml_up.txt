@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns:spshg="http://www.3dcitydb.org/importer-exporter/config/spshg" xmlns="http://www.3dcitydb.org/importer-exporter/config">
+    <database>
+        <referenceSystems>
+            <referenceSystem id="UUID_8c6f601e-57af-47f8-8641-355ffe4fdae1">
+                <srid>4326</srid>
+                <gmlSrsName>urn:ogc:def:crs:EPSG::4326</gmlSrsName>
+                <description>[Default] WGS 84</description>
+            </referenceSystem>
+        </referenceSystems>
+        <connections>
+            <connection id="UUID_52311068-d0cf-4d86-87ce-a713e8de1100" loginTimeout="60" initialSize="0">
+                <description>localhost_docker</description>
+                <type>PostGIS</type>
+                <server>citydb</server>
+                <port>5432</port>
+                <sid>citydb</sid>
+                <schema>citydb</schema>
+                <user>postgres</user>
+                <password>postgres</password>
+                <savePassword>true</savePassword>
+            </connection>
+        </connections>
+        <activeConnection>UUID_52311068-d0cf-4d86-87ce-a713e8de1100</activeConnection>
+        <updateBatching>
+            <featureBatchValue>20</featureBatchValue>
+            <gmlIdCacheBatchValue>1000</gmlIdCacheBatchValue>
+            <tempBatchValue>1000</tempBatchValue>
+        </updateBatching>
+        <workspaces>
+            <import>
+                <name></name>
+            </import>
+            <export>
+                <name></name>
+            </export>
+            <delete/>
+            <kmlExport>
+                <name></name>
+            </kmlExport>
+            <operations>
+                <name></name>
+            </operations>
+        </workspaces>
+        <operation>
+            <lastUsed>boundingBox</lastUsed>
+            <boundingBoxTypeName xmlns:ns3="http://www.opengis.net/citygml/2.0">ns3:_CityObject</boundingBoxTypeName>
+            <boundingBoxSrs>UUID_8c6f601e-57af-47f8-8641-355ffe4fdae1</boundingBoxSrs>
+            <spatialIndex>false</spatialIndex>
+            <normalIndex>false</normalIndex>
+        </operation>
+    </database>
+    <import>
+        <filter useTypeNames="false" useAttributeFilter="false" useCountFilter="false" useBboxFilter="false">
+            <typeNames/>
+            <attributes>
+                <gmlIds/>
+                <gmlName wildCard="*" singleCharacter="." escapeCharacter="\" matchCase="true"/>
+                <lineage wildCard="*" singleCharacter="." escapeCharacter="\" matchCase="true"/>
+            </attributes>
+            <limit/>
+            <bbox mode="overlap">
+                <extent srsRef="UUID_65b028a3-11aa-4ec7-bc77-4db5e64a297d">
+                    <lowerCorner></lowerCorner>
+                    <upperCorner></upperCorner>
+                </extent>
+            </bbox>
+        </filter>
+        <continuation>
+            <lineage></lineage>
+            <updatingPersonMode>database</updatingPersonMode>
+            <updatingPerson></updatingPerson>
+            <reasonForUpdate></reasonForUpdate>
+            <importCityDBMetadata>false</importCityDBMetadata>
+            <creationDateMode>replace</creationDateMode>
+            <terminationDateMode>replace</terminationDateMode>
+        </continuation>
+        <path>
+            <mode>lastUsed</mode>
+            <standardPath></standardPath>
+            <lastUsedPath>D:\TEMP\Download3\coblong</lastUsedPath>
+        </path>
+        <gmlId>
+            <uuidMode>complement</uuidMode>
+            <idPrefix>UUID_</idPrefix>
+            <keepGmlIdAsExternalReference>true</keepGmlIdAsExternalReference>
+            <codeSpaceMode>none</codeSpaceMode>
+            <codeSpace>UUID</codeSpace>
+        </gmlId>
+        <address>
+            <importXAL>true</importXAL>
+        </address>
+        <appearances>
+            <import>true</import>
+            <importTextureFiles>true</importTextureFiles>
+            <themeForTexturedSurface>rgbTexture</themeForTexturedSurface>
+        </appearances>
+        <affineTransformation isEnabled="false">
+            <transformationMatrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0</transformationMatrix>
+        </affineTransformation>
+        <indexes>
+            <spatial>unchanged</spatial>
+            <normal>unchanged</normal>
+        </indexes>
+        <xmlValidation>
+            <useXMLValidation>false</useXMLValidation>
+            <reportOneErrorPerFeature>false</reportOneErrorPerFeature>
+        </xmlValidation>
+        <xslTransformation isEnabled="false"/>
+        <importLog>
+            <logImportedFeatures>false</logImportedFeatures>
+            <logPath>C:\Users\PPIG\3dcitydb\importer-exporter\imported-features</logPath>
+        </importLog>
+        <resources>
+            <gmlIdCache>
+                <feature>
+                    <cacheSize>200000</cacheSize>
+                    <pageFactor>0.85</pageFactor>
+                    <partitions>10</partitions>
+                </feature>
+                <geometry>
+                    <cacheSize>200000</cacheSize>
+                    <pageFactor>0.85</pageFactor>
+                    <partitions>10</partitions>
+                </geometry>
+            </gmlIdCache>
+            <threadPool>
+                <default>
+                    <minThreads>2</minThreads>
+                    <maxThreads>12</maxThreads>
+                </default>
+            </threadPool>
+            <texImageCache>
+                <cacheSize>200000</cacheSize>
+                <pageFactor>0.85</pageFactor>
+                <partitions>10</partitions>
+            </texImageCache>
+        </resources>
+    </import>
+    <export useSimpleQuery="true">
+        <query targetSrs="UUID_65b028a3-11aa-4ec7-bc77-4db5e64a297d"/>
+        <simpleQuery version="2.0.0" targetSrs="UUID_65b028a3-11aa-4ec7-bc77-4db5e64a297d" useTypeNames="false" useFeatureVersionFilter="false" useSelectionFilter="true" useCountFilter="false" useLodFilter="false" useBboxFilter="true">
+            <typeNames>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/bridge/2.0">ns3:Bridge</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/building/2.0">ns3:Building</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/cityfurniture/2.0">ns3:CityFurniture</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/cityobjectgroup/2.0">ns3:CityObjectGroup</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/generics/2.0">ns3:GenericCityObject</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/landuse/2.0">ns3:LandUse</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/relief/2.0">ns3:ReliefFeature</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/transportation/2.0">ns3:TransportationComplex</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/transportation/2.0">ns3:Track</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/transportation/2.0">ns3:Railway</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/transportation/2.0">ns3:Road</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/transportation/2.0">ns3:Square</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/tunnel/2.0">ns3:Tunnel</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/vegetation/2.0">ns3:SolitaryVegetationObject</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/vegetation/2.0">ns3:PlantCover</typeName>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/waterbody/2.0">ns3:WaterBody</typeName>
+            </typeNames>
+            <featureVersion mode="latest"/>
+            <selection useSQLFilter="false">
+                <gmlIds>
+                    <id>bldg00-22</id>
+                </gmlIds>
+                <gmlName wildCard="*" singleCharacter="." escapeCharacter="\" matchCase="true"/>
+                <lineage wildCard="*" singleCharacter="." escapeCharacter="\" matchCase="true"/>
+                <sql/>
+            </selection>
+            <limit/>
+            <lods mode="or" searchMode="depth" searchDepth="1"/>
+            <bbox mode="overlap">
+                <extent srsRef="UUID_8c6f601e-57af-47f8-8641-355ffe4fdae1">
+                    <lowerCorner>107.60774863614986 -6.89178847549998</lowerCorner>
+                    <upperCorner>107.61244199004301 -6.88534943603061</upperCorner>
+                </extent>
+                <rows>1</rows>
+                <columns>1</columns>
+                <tilingOptions>
+                    <tilePath>tile</tilePath>
+                    <tilePathSuffix>row_column</tilePathSuffix>
+                    <tileNameSuffix>none</tileNameSuffix>
+                    <includeTileAsGenericAttribute>false</includeTileAsGenericAttribute>
+                    <genericAttributeValue>xMin_yMin_xMax_yMax</genericAttributeValue>
+                </tilingOptions>
+            </bbox>
+        </simpleQuery>
+        <path>
+            <mode>lastUsed</mode>
+            <standardPath></standardPath>
+            <lastUsedPath>D:\3D_MAPVIEWER\data\test\export</lastUsedPath>
+        </path>
+        <continuation>
+            <exportCityDBMetadata>false</exportCityDBMetadata>
+        </continuation>
+        <cityObjectGroup>
+            <exportMemberAsXLinks>false</exportMemberAsXLinks>
+        </cityObjectGroup>
+        <address>
+            <exportMode>db</exportMode>
+            <useFallback>false</useFallback>
+        </address>
+        <appearances>
+            <export>true</export>
+            <exportTextureFiles>true</exportTextureFiles>
+            <overwriteTextureFiles>true</overwriteTextureFiles>
+            <uniqueTextureFileNames>true</uniqueTextureFileNames>
+            <texturePath useBuckets="false">
+                <path>appearance</path>
+                <noOfBuckets>0</noOfBuckets>
+            </texturePath>
+        </appearances>
+        <xlink>
+            <feature>
+                <multipleRepresentationMode>xlink</multipleRepresentationMode>
+                <idPrefix>UUID_</idPrefix>
+                <appendId>false</appendId>
+                <keepGmlIdAsExternalReference>false</keepGmlIdAsExternalReference>
+            </feature>
+            <geometry>
+                <multipleRepresentationMode>xlink</multipleRepresentationMode>
+                <idPrefix>UUID_</idPrefix>
+                <appendId>false</appendId>
+            </geometry>
+        </xlink>
+        <xslTransformation isEnabled="false"/>
+        <cityGMLOptions>
+            <gmlEnvelope>
+                <features>top-level</features>
+            </gmlEnvelope>
+        </cityGMLOptions>
+        <resources>
+            <gmlIdCache>
+                <feature>
+                    <cacheSize>200000</cacheSize>
+                    <pageFactor>0.85</pageFactor>
+                    <partitions>10</partitions>
+                </feature>
+                <geometry>
+                    <cacheSize>200000</cacheSize>
+                    <pageFactor>0.85</pageFactor>
+                    <partitions>10</partitions>
+                </geometry>
+            </gmlIdCache>
+            <threadPool>
+                <default>
+                    <minThreads>2</minThreads>
+                    <maxThreads>12</maxThreads>
+                </default>
+            </threadPool>
+        </resources>
+    </export>
+    <delete useSimpleQuery="true">
+        <query/>
+        <simpleQuery useTypeNames="false" useFeatureVersionFilter="false" useSelectionFilter="false" useCountFilter="false" useLodFilter="false" useBboxFilter="false">
+            <typeNames/>
+            <featureVersion mode="latest"/>
+            <selection useSQLFilter="false">
+                <gmlIds/>
+                <gmlName wildCard="*" singleCharacter="." escapeCharacter="\" matchCase="true"/>
+                <lineage wildCard="*" singleCharacter="." escapeCharacter="\" matchCase="true"/>
+                <sql/>
+            </selection>
+            <limit/>
+            <lods mode="or" searchMode="depth" searchDepth="1"/>
+            <bbox mode="overlap">
+                <extent>
+                    <lowerCorner></lowerCorner>
+                    <upperCorner></upperCorner>
+                </extent>
+                <rows>1</rows>
+                <columns>1</columns>
+                <tilingOptions>
+                    <tilePath>tile</tilePath>
+                    <tilePathSuffix>row_column</tilePathSuffix>
+                    <tileNameSuffix>none</tileNameSuffix>
+                    <includeTileAsGenericAttribute>false</includeTileAsGenericAttribute>
+                    <genericAttributeValue>xMin_yMin_xMax_yMax</genericAttributeValue>
+                </tilingOptions>
+            </bbox>
+        </simpleQuery>
+        <mode>delete</mode>
+        <continuation>
+            <updatingPersonMode>database</updatingPersonMode>
+        </continuation>
+    </delete>
+    <kmlExport>
+        <query mode="single">
+            <typeNames>
+                <typeName xmlns:ns3="http://www.opengis.net/citygml/building/2.0">ns3:Building</typeName>
+            </typeNames>
+            <gmlIds>
